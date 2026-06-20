@@ -2,20 +2,6 @@
 
 RailOps Enterprise DBMS is a full-stack Railway Database Management System built with Flask, MySQL, Bootstrap 5, HTML5, CSS3, JavaScript, and Font Awesome. It provides an enterprise-style administrator dashboard for managing railway trains, stations, routes, schedules, employees, and reports from one centralized web application.
 
-## Live Project
-
-Vercel deployment:
-
-```text
-https://rail-ops-enterprise-dbms.vercel.app
-```
-
-## Default Login
-
-```text
-Username: admin
-Password: admin123
-```
 
 ## Key Features
 
@@ -117,76 +103,6 @@ railway-dbms/
 └── README.md
 ```
 
-## Run Locally
-
-```powershell
-cd C:\Users\Shambhavi\Documents\Codex\2026-06-13\build-a-railway-database-management-system\outputs\railway-dbms
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python run.py
-```
-
-Open:
-
-```text
-http://127.0.0.1:5000
-```
-
-## MySQL Setup
-
-Create the database and tables:
-
-```powershell
-mysql -u root -p < schema.sql
-```
-
-Run with MySQL:
-
-```powershell
-$env:DB_ENGINE="mysql"
-$env:MYSQL_HOST="localhost"
-$env:MYSQL_PORT="3306"
-$env:MYSQL_DATABASE="railway_dbms"
-$env:MYSQL_USER="root"
-$env:MYSQL_PASSWORD="your_password"
-python run.py
-```
-
-If `DB_ENGINE` is not set, the app uses SQLite for local/demo use.
-
-## Vercel Deployment
-
-This project includes `api/index.py` and `vercel.json` for deployment on Vercel.
-
-### Required Environment Variable
-
-```text
-SECRET_KEY=your-long-secret-key
-```
-
-### Optional MySQL Environment Variables
-
-```text
-DB_ENGINE=mysql
-MYSQL_HOST=your-mysql-host
-MYSQL_PORT=3306
-MYSQL_DATABASE=railway_dbms
-MYSQL_USER=your-mysql-user
-MYSQL_PASSWORD=your-mysql-password
-```
-
-For demo deployment, SQLite fallback can be used. For production, use an external MySQL database and import `schema.sql`.
-
-## Screenshots
-
-Add project screenshots here after final deployment:
-
-```text
-Dashboard
-Train Management
-Report Generation
-```
 
 ## Author
 
