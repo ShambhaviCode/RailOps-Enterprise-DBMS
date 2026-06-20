@@ -8,6 +8,18 @@
   ],
   "routes": [
     {
+      "src": "/style.css",
+      "dest": "/public/style.css"
+    },
+    {
+      "src": "/app.js",
+      "dest": "/public/app.js"
+    },
+    {
+      "src": "/railway-hero.png",
+      "dest": "/public/railway-hero.png"
+    },
+    {
       "src": "/static/(.*)",
       "dest": "/static/$1"
     },
