@@ -91,6 +91,21 @@
   {% endwith %}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function updateIstClockInline() {
+    const node = document.getElementById("istClock");
+    if (!node) return;
+    node.textContent = new Intl.DateTimeFormat("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    }).format(new Date()) + " IST";
+  }
+  updateIstClockInline();
+  setInterval(updateIstClockInline, 1000);
+</script>
 <script src="/app.js"></script>
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>

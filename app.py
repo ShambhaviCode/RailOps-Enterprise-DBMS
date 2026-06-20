@@ -3,6 +3,7 @@ import io
 import os
 from datetime import datetime
 from functools import wraps
+from zoneinfo import ZoneInfo
 
 from flask import (
     Flask,
@@ -27,6 +28,7 @@ except ImportError:
 db = SQLAlchemy()
 APP_VERSION = "1.0.0"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IST = ZoneInfo("Asia/Kolkata")
 
 
 def create_app():
@@ -389,7 +391,7 @@ def register_routes(app):
     def inject_globals():
         return {
             "current_user": current_user(),
-            "current_date": datetime.now().strftime("%d %B %Y"),
+            "current_date": datetime.now(IST).strftime("%d %B %Y"),
             "app_version": APP_VERSION,
             "modules": MODULES,
         }
