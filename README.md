@@ -2,6 +2,20 @@
 
 RailOps Enterprise DBMS is a full-stack Railway Database Management System built with Flask, MySQL, Bootstrap 5, HTML5, CSS3, JavaScript, and Font Awesome. It provides an enterprise-style administrator dashboard for managing railway trains, stations, routes, schedules, employees, and reports from one centralized web application.
 
+##Live Demo
+
+rail-ops-enterprise-dbms.vercel.app
+
+## Default Login
+
+Username: admin  
+Password: admin123
+
+## Screenshots
+
+<img width="1392" height="776" alt="image" src="https://github.com/user-attachments/assets/80a22fb6-a6fd-47fe-ac0d-67d0501fc9f7" />
+<img width="1887" height="867" alt="image" src="https://github.com/user-attachments/assets/dbfc3f43-f6b4-428b-9cb9-245c63f36274" />
+
 
 ## Key Features
 
